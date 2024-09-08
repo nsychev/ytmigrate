@@ -47,6 +47,11 @@ Pass your VK token with video scope in environment variable `VK_TOKEN`.
 
 [Issue token](https://oauth.vk.com/authorize?client_id=6287487&scope=1073737727&redirect_uri=https://oauth.vk.com/blank.html&display=page&response_type=token&revoke=1)
 
+## Help wanted
+
+- [ ] Support automatic publishing
+- [ ] Upload entire playlists
+
 ## License
 
 [MIT License](LICENSE) is applied to this repository.
