@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "ytmigrate"
+version = "0.1.0"
+description = ""
+authors = ["Nikita Sychev <root@nsychev.ru>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+yt-dlp = "^2024.8.6"
+vk-api = {git = "https://github.com/python273/vk_api"}
+python-magic = "^0.4.27"
+click = "^8.1.7"
+
+[tool.poetry.scripts]
+ytmigrate = "ytmigrate.__main__:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
