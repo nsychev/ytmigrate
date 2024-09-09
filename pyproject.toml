@@ -1,8 +1,16 @@
 [tool.poetry]
 name = "ytmigrate"
 version = "0.1.0"
-description = ""
+description = "Tool for migrating videos from YouTube to VK"
 authors = ["Nikita Sychev <root@nsychev.ru>"]
+license = "MIT"
+readme = "README.md"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Topic :: Multimedia :: Video",
+    "Topic :: System :: Archiving :: Mirroring"
+]
 
 [tool.poetry.dependencies]
 python = "^3.10"

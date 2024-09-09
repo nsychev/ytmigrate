@@ -13,9 +13,10 @@ def upload(
     thumbnail_path: str | None = None,
     description: str | None = None,
     # does not work for now
-    is_public: bool = False
+    is_public: bool = False,
+    debug: bool = False
 ) -> str:
-    vk_session = vk_api.VkApi(token = os.environ["VK_TOKEN"])
+    vk_session = vk_api.VkApi(token = os.environ["VK_TOKEN"], api_version="5.199")
     uploader = vk_api.VkUpload(vk_session)
 
     click.echo(click.style("[*] Uploading video to VK", fg="yellow"))
@@ -27,8 +28,16 @@ def upload(
         group_id=group_id,
         album_id=album_id,
         # does not work for now
-        # privacy_view=["all"] if is_public else None
+        privacy_view="all" if is_public else None
     )
+
+    if debug:
+        click.echo(
+            click.style(
+                f"[.] Uploaded video info: {video}",
+                fg="black"
+            )
+        )
 
     click.echo(
         click.style(
